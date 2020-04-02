@@ -1,27 +1,78 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CustomList
+﻿namespace CustomList
 {
-    public class MyList<T>
+    public class CustomList<T>
     {
-        int count;
-        public int Count { get; set; }
-        int capacity;
+        T[] items;
         public int Capacity { get; set; }
-        private T[] items;
-        public MyList()
+        public int Count { get; set; }
+
+        //constructor
+        public CustomList()
         {
-            capacity = 4;
-            items = new T[capacity];
+            Capacity = 4;
+            items = new T[Capacity];
+            // 0 1 2 3
+            Count = 0;
+        }
+        // need to create an indexer
+
+        public T this[int i]
+        {
+            get { return items[i]; }
+            set { items[i] = value; }
         }
 
-        public void Add()
+        public void Add(T item)
         {
+            // check if capacity is equal to count
+            // if capaciy is equal to count, you need to double the size of your items array
+            CheckCapacity();
+            items[Count] = item;
+            Count++;
+        }
+
+        public void CheckCapacity()
+        {
+            if (Count >= Capacity)
+            {   // doubling the capacity to 8
+                Capacity = Capacity * 2;
+                T[] tempArray = new T[Capacity];
+                //copying the old data to the new Array
+                for (int i = 0; i < Count; i++)
+                {
+                    tempArray[i] = items[i];
+                }
+                items = tempArray;
+
+            }
 
         }
+        public void Remove(T value)
+        {
+            for (int i = 0; i < Count ; i++)
+            {
+                if(value.Equals(items[i]))
+                {
+                    items[i] = items[i + 1];
+                }
+            }
+            Count--;
+
+            
+
+            //if (Count <= Capacity)
+            //{
+            //    Capacity = Capacity % 2;
+            //    T[] tempArray = new T[Capacity];
+            //    for (int i = 0; i > Count; i--)
+            //    {
+            //        tempArray[i] = items[i];
+
+            //    }
+            //    items = tempArray;
+            //}
+
+        }
+
     }
 }

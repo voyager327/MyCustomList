@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8DF1630A-4A23-441A-B634-BDEB224AA991}</ProjectGuid>
+    <ProjectGuid>{AFB2D8C5-B249-42FD-BA9F-7C33ACF06C8C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CustomListTesting</RootNamespace>
-    <AssemblyName>CustomListTesting</AssemblyName>
+    <RootNamespace>CustomListTests</RootNamespace>
+    <AssemblyName>CustomListTests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CustomList\CustomList.csproj">
-      <Project>{6c45ed23-03eb-4939-843c-03d61d754a67}</Project>
+      <Project>{8063c8b2-c184-418b-9da0-14c3d207c9c3}</Project>
       <Name>CustomList</Name>
     </ProjectReference>
   </ItemGroup>

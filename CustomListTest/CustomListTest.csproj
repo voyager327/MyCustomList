@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8063C8B2-C184-418B-9DA0-14C3D207C9C3}</ProjectGuid>
+    <ProjectGuid>{C10C6B85-4046-446D-ABAD-3A1D48EA8F34}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CustomList</RootNamespace>
-    <AssemblyName>CustomList</AssemblyName>
+    <RootNamespace>CustomListTest</RootNamespace>
+    <AssemblyName>CustomListTest</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomList\CustomList.csproj">
+      <Project>{8063c8b2-c184-418b-9da0-14c3d207c9c3}</Project>
+      <Name>CustomList</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
