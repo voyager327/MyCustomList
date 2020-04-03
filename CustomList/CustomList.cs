@@ -58,8 +58,14 @@
             }
             Count--;
         }
-        public void ToString(T Item)
+        public void ToString(T contents)
         {
+            
+            int spaces1 = 0;
+            for (int i = 0; i < contents.Length; i++)
+            {
+                if (contents[i]  == '')
+            }
 
         }
 
