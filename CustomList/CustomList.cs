@@ -57,20 +57,9 @@
                 }
             }
             Count--;
-
-            
-
-            //if (Count <= Capacity)
-            //{
-            //    Capacity = Capacity % 2;
-            //    T[] tempArray = new T[Capacity];
-            //    for (int i = 0; i > Count; i--)
-            //    {
-            //        tempArray[i] = items[i];
-
-            //    }
-            //    items = tempArray;
-            //}
+        }
+        public void ToString(T Item)
+        {
 
         }
 
